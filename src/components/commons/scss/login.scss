@@ -1,0 +1,83 @@
+@import 'components/commons/scss/var.scss';
+
+.login-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @include webInline();
+
+  &>div:first-of-type {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  
+    figure {
+      position: relative;
+      width: 48rem;
+      aspect-ratio: 1;
+
+      img {
+        position: absolute;
+        inset: 0;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    form {
+      width: 48rem;
+      margin-top: 1rem;
+
+      .input-item {
+        position: relative;
+        border-bottom: 1px solid $base-font-color;
+        padding: 1rem 0;
+        margin-bottom: 4rem;
+
+        input {
+          width: 100%;
+          background-color: transparent;
+          outline: none;
+          border: none;
+          color: $base-font-color;
+
+          &:focus+label,
+          &:valid+label {
+            color: $point-pink-color;
+            transform: translateY(-100%);
+          }
+
+          &:invalid+label {
+          }
+        }
+
+        label {
+          position: absolute;
+          font-size: 1.6rem;
+          left: 1rem;
+          transition: all 0.3s;
+        }
+      }
+
+      input[type="submit"] {
+        position: relative;
+        width: 100%;
+        margin-top: 2rem;
+        padding: 1rem 0;
+        font-weight: 600;
+        cursor: pointer;
+
+        &::before {
+          position: absolute;
+          content: '';
+          width: 100%;
+          height: 100%;
+          background-color: pink;
+          z-index: 100;
+        }
+      }
+    }
+  }
+}

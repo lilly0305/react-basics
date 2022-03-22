@@ -1,0 +1,36 @@
+// colors : dark-mode
+$bg-color: #1a1a1a;
+$base-font-color:#ffffff;
+$point-pink-color: #F24080;
+
+// pastel
+$yellow-point-color: #F8DE7F;
+$red-point-color: #c28a8f;
+$blue-point-color: #616b90;
+$beige-color: #e6e2dd;
+$green-color: #7f9a87;
+
+// font-families
+$eng-title-ff: 'Poppins', sans-serif;
+$ko-paragraph-ff: 'NanumBarunGothic', sans-serif;
+
+// font-sizes
+$base-fs: 1.6rem;
+$header-fs: 3.2rem;
+$sub-title-fs: 1.8rem;
+$section-title-fs: 2.4rem;
+$subpage-title-fs: 3.6rem;
+
+@media (min-width: 992px) {
+  $base-fs: 1.6rem;
+  $header-fs: 4.8rem;
+  $sub-title-fs: 2.4rem;
+  $section-title-fs: 3.2rem;
+  $subpage-title-fs: 5.6rem;
+}
+
+//  mixins
+@mixin webInline {
+  max-width: 119.4rem;
+  margin: 0 auto;
+}

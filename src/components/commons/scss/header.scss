@@ -1,0 +1,46 @@
+@import 'components/commons/scss/var.scss';
+
+.web-header {
+  width: 100%;
+  height: 8rem;
+  font-family: $eng-title-ff;
+
+  .header-wrap {
+    @include webInline();
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+
+    .web-nav {
+      flex: 2;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-right: 10rem;
+
+      a {
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        font-weight: 500;
+        margin-right: 4.2rem;
+        transition: all 0.3s;
+
+        &:hover{
+          color: $point-pink-color;
+        }
+      }
+    }
+
+    .login-icon {
+      i {
+        font-size: 2.4rem;
+        transition: all 0.3s;
+
+        &:hover{
+          color: $point-pink-color;
+        }
+      }
+    }
+  }
+}
