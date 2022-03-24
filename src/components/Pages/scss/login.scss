@@ -1,0 +1,160 @@
+@import 'components/commons/scss/var.scss';
+
+.light-mode {
+  .login-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include webInline();
+  
+    &>div:first-of-type {
+      form {
+        .input-list {
+          .input-item {
+  
+            input {
+              color: $fc-light-mode;
+            }
+  
+            label {
+              border-bottom: 1px solid $fc-light-mode;
+  
+              &::after {
+                background-color: $bg-light-mode;
+              }
+            }
+          }
+        }
+  
+        .submit-wrap {
+          position: relative;
+          background-color: $fc-light-mode;
+  
+          input[type="submit"] {
+            width: 100%;
+            color: $bg-light-mode;
+          }
+        }
+  
+  
+      }
+    }
+  }
+}
+
+.login-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @include webInline();
+
+  &>div:first-of-type {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    figure {
+      position: relative;
+      width: 48rem;
+      aspect-ratio: 1;
+
+      img {
+        position: absolute;
+        inset: 0;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 48rem;
+      margin-top: 1rem;
+
+      .input-list {
+        .input-item {
+          position: relative;
+          padding: 1rem 0;
+          margin-bottom: 4rem;
+
+          input {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            outline: none;
+            color: $base-font-color;
+
+            &:focus+label,
+            &:valid+label {
+              span {
+                color: $point-pink-color;
+                transform: translateY(-100%);
+              }
+
+              &::after {
+                width: 100%;
+              }
+            }
+          }
+
+          label {
+            display: inline-block;
+            font-size: 1.6rem;
+
+            position: absolute;
+            left: 0%;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            border-bottom: 1px solid $base-font-color;
+            text-align: left;
+            pointer-events: none;
+
+            span {
+              position: absolute;
+              left: 1rem;
+              top: 1rem;
+              transition: all .3s ease;
+            }
+
+            &::after {
+              content: '';
+              position: absolute;
+              width: 0;
+              height: 1px;
+              background-color: $bg-color;
+              left: 0;
+              bottom: -1px;
+              transition: all 0.3s;
+            }
+
+          }
+        }
+      }
+
+      .submit-wrap {
+        position: relative;
+        background-color: white;
+        margin-top: 2rem;
+
+        input[type="submit"] {
+          width: 100%;
+          padding: 1rem 0;
+          font-weight: 600;
+          cursor: pointer;
+          background-color: transparent;
+        }
+
+      }
+
+
+    }
+  }
+}

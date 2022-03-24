@@ -1,9 +1,29 @@
 @import 'components/commons/scss/var.scss';
+body {
+  .dark-logo{
+    display: block;    
+  }
+
+  .light-logo{
+    display: none;
+  }
+
+  &.light-mode {
+    .dark-logo{
+      display: none;    
+    }
+  
+    .light-logo{
+      display: block;
+    }
+  }
+}
 
 .web-header {
   width: 100%;
   height: 8rem;
   font-family: $eng-title-ff;
+  box-shadow: 2px 0 2rem rgba(0, 0, 0, 0.1);
 
   .header-wrap {
     @include webInline();

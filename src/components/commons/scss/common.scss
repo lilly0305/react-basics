@@ -51,7 +51,7 @@ h1.subpage-title {
   font-weight: 700;
   text-transform: uppercase;
 
-  strong{
+  strong {
     color: $point-pink-color;
   }
 }
@@ -65,4 +65,61 @@ h1.subpage-title {
 
 .webWidth {
   @include webInline();
+}
+
+// 모드 스위치
+.themeModeToggle {
+  position: relative;
+  width: 6rem;
+  height: 3rem;
+  margin-left: 4rem;
+  border-radius: 30px;
+  cursor: pointer;
+
+  button {
+    position: absolute;
+    z-index: 2;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    top: 2.5px;
+    left: 2.5px;
+    transition: all 0.3s;
+  }
+
+  &::after {
+    position: absolute;
+    bottom: 0.5px;
+    width: fit-content;
+    font-size: 1.8rem;
+  }
+
+  &.light {
+    background-color: orange;
+    border: 2px solid orange;
+
+    button {
+      background-color: white;
+    }
+    &::after {
+      content: '☀️';
+      right: 0.2rem;
+    }
+  }
+
+  &.dark {
+    border: 2px solid white;
+    background-color: #333;
+
+    button {
+      background-color: white;
+      margin-left: 3rem;
+    }
+  
+    &::after {
+      left: 0.2rem;
+      content: '🌙';
+    }
+  }
+
 }

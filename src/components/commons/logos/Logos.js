@@ -8,7 +8,7 @@ import mobileLightLogo from 'components/commons/images/light-mode/logo.svg';
 
 const WebDarkLogo =() => {
   return(
-    <Link to="/">
+    <Link to="/" className="dark-logo">
       <img src={webDarkLogo} alt="다크모드 웹 로고" />
     </Link>
   )
@@ -16,7 +16,7 @@ const WebDarkLogo =() => {
 
 const WebLightLogo =() => {
   return(
-    <Link to="/">
+    <Link to="/" className="light-logo">
       <img src={webLightLogo} alt="라이트모드 웹 로고" />
     </Link>
   )

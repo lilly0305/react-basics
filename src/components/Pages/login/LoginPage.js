@@ -1,5 +1,5 @@
 import loginPage from 'components/commons/images/painting10.jpg';
-import 'components/commons/scss/login.scss';
+import 'components/Pages/scss/login.scss';
 
 export const LoginPage = () => {
   const inputList =[
@@ -9,7 +9,7 @@ export const LoginPage = () => {
     },
     {
       name: 'email',
-      type: 'email'
+      type: 'text'
     },
     {
       name: 'password',
@@ -27,16 +27,26 @@ export const LoginPage = () => {
         </figure>
 
         <form>
+          <div className='input-list'>
           {
             inputList.map((input) => (
               <div className='input-item'>
-                <input type={input.type} name={input.name} id={input.name} required />
-                <label htmlFor={input.name}>{input.name}</label>
+                <input
+                  type={input.type} 
+                  name={input.name} 
+                  id={input.name} 
+                  required
+                  autoComplete="off"
+                />
+                <label htmlFor={input.name}><span>{input.name}</span></label>
               </div>
             ))
           }
-          
-          <input type="submit" value="LOGIN"/>
+          </div>
+
+          <div className='submit-wrap'>
+            <input type="submit" value="LOGIN" onClick={(e) => e.preventDefault()}/>
+          </div>
         </form>
       </div>
     </section>

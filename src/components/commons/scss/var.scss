@@ -3,6 +3,28 @@ $bg-color: #1a1a1a;
 $base-font-color:#ffffff;
 $point-pink-color: #F24080;
 
+// colors : light-mode
+$bg-light-mode: #ffffff;
+$fc-light-mode:#1a1a1a;
+
+body {
+  background-color: $bg-color;
+  color: $base-font-color;
+
+  i {
+    color: $base-font-color;
+  }
+}
+
+body.light-mode {
+  background-color: $bg-light-mode;
+  color: $fc-light-mode;
+  
+  i {
+    color: $fc-light-mode;
+  }
+}
+
 // pastel
 $yellow-point-color: #F8DE7F;
 $red-point-color: #c28a8f;
@@ -11,8 +33,10 @@ $beige-color: #e6e2dd;
 $green-color: #7f9a87;
 
 // font-families
-$eng-title-ff: 'Poppins', sans-serif;
-$ko-paragraph-ff: 'NanumBarunGothic', sans-serif;
+$eng-title-ff: 'Poppins',
+sans-serif;
+$ko-paragraph-ff: 'NanumBarunGothic',
+sans-serif;
 
 // font-sizes
 $base-fs: 1.6rem;
